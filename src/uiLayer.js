@@ -2,8 +2,7 @@ var uiLayer = cc.Layer.extend({
     ctor: function () {
         this._super();
         var size = cc.director.getWinSize();
-
-        //write_savedata(make_new_savedata_json());
+      
         var coins = userInfo.get('coins');
         var coinInfo = cc.LabelTTF.create(`UI: ${coins} coins`, "Arial", 80);
         //userInfo.set('coins',coins+10);
