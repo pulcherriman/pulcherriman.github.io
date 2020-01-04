@@ -24,3 +24,14 @@ function LoadData(){
 	userInfo = new Status();
 	userInfo.setAllData(JSON.parse(localStorage.getItem('dummy_save')));
 }
+
+function make_new_savedata_json(){
+    var new_data = {
+        "coins": 10,
+        "antimatters": 5,
+    }
+    return new_data;
+}
+function write_savedata(json){
+    localStorage.setItem('dummy_save', JSON.stringify(json));
+}
