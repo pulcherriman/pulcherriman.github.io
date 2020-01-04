@@ -2,10 +2,10 @@ var gameLayer = cc.Layer.extend({
     ctor: function () {
         this._super();
         var size = cc.director.getWinSize();
+        var base = cc.p(300, 200);
+        var limit = cc.pSub(cc.p(size.width, size.height), base);
 
-        var coinInfo = cc.LabelTTF.create(`this is game layer`, "Arial", 80);
-        coinInfo.setPosition(size.width / 2, size.height - 320);
-        coinInfo.setFontFillColor(cc.color(0, 0, 0, 255));
-        this.addChild(coinInfo, 0);
+        var stage = new Stage(17, 8, base, limit);
+        this.addChild(stage.getLayer(), 0);
     }
 });
