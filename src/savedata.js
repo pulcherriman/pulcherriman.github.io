@@ -9,6 +9,7 @@ function read_savedata(){
 function make_new_savedata_json(){
     var new_data = {
         "coins": 10,
+        "antimatters": 5,
     }
     return new_data;
 }

@@ -1,8 +1,6 @@
 class Status{
 	constructor() {
 		this.map = new Map;
-		//dame
-		//this.map['coins']=100;
 	}
 	set(key, value) {
 		this.map.set(key, value);
@@ -14,6 +12,11 @@ class Status{
 	}
 	get(key) {
 		return this.map.get(key);
+	}
+	save(){
+		var tmp={};
+		this.map.forEach(function (value,key){tmp[key]=value;});
+		localStorage.setItem('dummy_save', JSON.stringify(tmp));
 	}
 }
 var userInfo;
