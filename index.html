@@ -22,6 +22,7 @@
                     "src/gameLayer.js",
                     "src/uiLayer.js",
                     "src/savedata.js",
+                    "src/status.js",
                 ]
             }
         </script>
@@ -34,6 +35,8 @@
                     cc.view.setDesignResolutionSize(1920, 1080, cc.ResolutionPolicy.SHOW_ALL);
                     cc.view.resizeWithBrowserSize(true);
                     //load resources
+                    write_savedata(make_new_savedata_json());
+                    LoadData();
                     cc.LoaderScene.preload(["HelloWorld.png"], function () { // この画像のpreloadは後々自作画像に差し替える
                         cc.director.runScene(new baseScene());
                     }, this);
