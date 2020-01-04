@@ -25,9 +25,9 @@ class Pai {
         var bg = new cc.DrawNode();
         bg.drawRect(this.winBase, this.winLimit,
             cc.color.WHITE, 1, cc.color.BLACK);
-        sprite.addChild(bg, 0);
+        // sprite.addChild(bg, 0);
 
-        var str = cc.LabelTTF.create(`${this.visibleNames[this.value]}`, "Arial", 30);
+        var str = cc.LabelTTF.create(`${this.visibleNames[this.value]}`, "Arial", 60);
         let winMid = cc.pAdd(this.winBase, new cc.p(this.winSize.width / 2, this.winSize.height / 2 - 5));
         str.setPosition(winMid.x, winMid.y);
         str.setFontFillColor(cc.color(0, 0, 0, 255));
