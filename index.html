@@ -17,7 +17,10 @@
                 "id": "gameCanvas",
                 "renderMode": 1,
                 "jsList": [
-                    "src/blankScene.js",
+                    "src/baseScene.js",
+                    "src/blankLayer.js",
+                    "src/gameLayer.js",
+                    "src/uiLayer.js",
                     "src/savedata.js",
                 ]
             }
@@ -32,7 +35,7 @@
                     cc.view.resizeWithBrowserSize(true);
                     //load resources
                     cc.LoaderScene.preload(["HelloWorld.png"], function () { // この画像のpreloadは後々自作画像に差し替える
-                        cc.director.runScene(new blankScene());
+                        cc.director.runScene(new baseScene());
                     }, this);
                 };
                 cc.game.run("gameCanvas");
