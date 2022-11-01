@@ -1,54 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Hello Cocos2d-JS</title>
-        <style>
-            body::-webkit-scrollbar {
-              display: none;
-            }
-          </style>
-    </head>
-    <body>
-        <canvas id="gameCanvas"></canvas>
-        <script>
-            document.ccConfig = {
-                "debugMode": 1,
-                "frameRate": 60,
-                "id": "gameCanvas",
-                "renderMode": 1,
-                "jsList": [
-                    "src/baseScene.js",
-                    "src/blankLayer.js",
-                    "src/gameLayer.js",
-                    "src/nikakudori.js",
-                    "src/uiLayer.js",
-                    "src/savedata.js",
-                    "src/status.js",
-                ]
-            }
-        </script>
-        <script type="text/javascript" src="cocos2d-js-v3.9.js" charset="UTF-8"></script>
-        <script type="text/javascript">
-            window.onload = function(){
-                cc.game.onStart = function(){
-                    cc.view.enableRetina(false);
-                    cc.view.adjustViewPort(true);
-                    cc.view.setDesignResolutionSize(1920, 1080, cc.ResolutionPolicy.SHOW_ALL);
-                    cc.view.resizeWithBrowserSize(true);
-                    //load resources
-
-                    //デバッグ用デフォルトセーブデータ書き込み
-                    write_savedata(make_new_savedata_json());
-                    
-                    //セーブデータをロード
-                    LoadData();
-
-                    cc.LoaderScene.preload(["HelloWorld.png"], function () { // この画像のpreloadは後々自作画像に差し替える
-                        cc.director.runScene(new baseScene());
-                    }, this);
-                };
-                cc.game.run("gameCanvas");
-            }; 
-        </script>
-    </body>
+	<head>
+		<title>no content</title>
+	</head>
+	<body>
+		Hello.
+	</body>
 </html>
